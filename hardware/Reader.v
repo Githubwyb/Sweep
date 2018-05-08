@@ -27,7 +27,8 @@ module Reader(
 	rst_n,      //reset signal
 	data_ad,    //the results of AD module
 	ready,      //鍙戠粰CPU缁撴潫鏈疆鏁版嵁鍙戦€
-	tx
+	tx,
+	ad_clk
 );
 	input sysclk;
 	//input clock;
@@ -38,7 +39,7 @@ module Reader(
 	output reg ready;
 	output tx;
 	 
-	wire ad_clk;
+	output ad_clk;
 	reg [5:0] i;
 	reg [6:0] j;
 	reg [511:0] Data;
